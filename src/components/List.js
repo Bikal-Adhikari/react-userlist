@@ -1,11 +1,13 @@
 import React from "react";
 
-export const List = () => {
+export const List = ({ userList = [] }) => {
+  //   const userList = ["Bikal", "John", "Jane"];
   return (
     <div>
       <ul>
-        <li>Bikal</li>
-        <li>John</li>
+        {userList.map((name, i) => {
+          return <li>{name}</li>;
+        })}
       </ul>
     </div>
   );
